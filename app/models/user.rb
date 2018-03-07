@@ -1,4 +1,13 @@
 class User < ActiveRecord::Base
-  has_many :todos
   has_secure_password
+  has_many :todos
+
+  def slug
+    username.downcase.gsub(" ","-")
+  end
+
+  def self.find_by_slug(slug)
+   self.all.find{|user| slug == user.slug} 
+  end
+
 end
