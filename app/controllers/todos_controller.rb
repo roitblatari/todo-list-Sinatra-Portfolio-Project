@@ -13,9 +13,15 @@ class TodosController < ApplicationController
 
   post '/todo/new' do
     @user = current_user
-    @todos = current_user.todos
-    @todos.save
+    # binding.pry
+    @todo = Todo.new(content: params[:content], user_id: @user.id)
+    # @todos = current_user.todos
+    @todo.save
     redirect "/todos/index"
+  end
+
+  get "/todos/edit" do
+binding.pry
   end
 
 end

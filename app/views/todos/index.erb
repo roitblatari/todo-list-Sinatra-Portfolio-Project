@@ -1,8 +1,13 @@
-<h1>Welcome <%=@user.username%>'s Todo List </h1>
+<h1>Welcome To <%=@user.username%>'s Todo List </h1>
 <%@todos.each do |todo|%>
-  <h2> <%=todo%> </h2>
+</br>
+  <p> <%=todo.content%> </p>
+  <form action="/todos/edit" method="get">
+  <input type="submit" value="Edit Todo">
+</Form>
+<br>
 <%end%>
 
 <form action="/todos/new" method="get">
-<input type="submit" value="Create New Todo">
+  <input type="submit" value="Create New Todo">
 </Form>
