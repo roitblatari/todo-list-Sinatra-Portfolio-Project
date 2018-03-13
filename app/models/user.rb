@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_secure_password
   has_many :todos
-   validates :username, presence: true
+  validates :username, presence: true
   validates :email, presence: true
     
 
