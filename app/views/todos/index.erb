@@ -2,7 +2,8 @@
 <%@todos.each do |todo|%>
 </br>
   <p> <%=todo.content%> </p>
-  <form action="/todos/edit" method="get">
+  
+  <form action="/todos/<%= todo.id %>/edit" method="get" >
   <input type="submit" value="Edit Todo">
 </Form>
 <br>

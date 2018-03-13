@@ -2,9 +2,20 @@ class UsersController < ApplicationController
   
   get "/users/new" do
     if !!logged_in?
-      erb :"/users/login"
+      redirect "/todos/index"
     else
       erb :'/users/new'
+    end
+  end
+
+  post '/users' do
+    @user = User.new(username: params[:username], email: params[:email], password: params[:password] )
+    if @user.save
+      session[:user_id] = @user.id
+      redirect "/users/#{@user.slug}"
+    else
+      # binding.pry
+      redirect "/"
     end
   end
 
@@ -26,17 +37,6 @@ class UsersController < ApplicationController
     end
   end
 
-  post '/users' do
-    @user = User.new(username: params[:username], email: params[:email], password: params[:password] )
-    if @user.save
-      session[:user_id] = @user.id
-      redirect "/users/#{@user.slug}"
-    else
-      # binding.pry
-      redirect "/"
-    end
-  end
-
   get "/users/:slug" do
     # binding.pry
     @user = User.find_by_slug(params[:slug])
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
     else
       # binding.pry
       @todos = @user.todos
-      erb :"/users/show"
+      redirect "/todos/index"
     end
   end
 end
