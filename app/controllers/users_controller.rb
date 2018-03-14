@@ -1,5 +1,7 @@
+# require 'sinatra/flash'
 class UsersController < ApplicationController
-  
+  # use Sinatra::Flash
+
   get "/users/new" do
     if !!logged_in?
       redirect "/todos/index"
@@ -15,6 +17,7 @@ class UsersController < ApplicationController
       redirect "/users/#{@user.slug}"
     else
       # binding.pry
+      # flash[:message] =  "Could not save User, Please fill out the full form "
       redirect "/"
     end
   end
@@ -48,4 +51,17 @@ class UsersController < ApplicationController
       redirect "/todos/index"
     end
   end
+
+   get "/users/logout" do
+    # binding.pry
+      @user = User.find_by_slug(params[:slug])
+      if logged_in?
+        session.destroy
+        @current_user = nil
+        erb :"/index"
+      else
+        erb :"/index"
+      end
+   end
+
 end
