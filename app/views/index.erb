@@ -1,5 +1,9 @@
 <h1>Welcome  </h1>
 
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+<% end %>
+
 <%# button %>
 <h3>Create an Account</h3>
 <form method="get" action="/users/new">
