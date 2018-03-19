@@ -17,13 +17,13 @@ class TodosController < ApplicationController
   post '/todo/new' do
     @user = current_user
     # binding.pry
-    @todo = Todo.new(content: params[:content], user_id: @user.id)
+    @todo =  @user.todos.build(content: params[:content])
     # @todos = current_user.todos
     if @todo.save
       redirect "/todos/index"
     else
       # binding.pry
-      # flash[:message] = "Please fill out the full form."
+      flash[:message] = "Please fill out the FULL form."
       redirect "/todos/index"
     end 
 
@@ -50,7 +50,8 @@ class TodosController < ApplicationController
       @todo.save
      redirect "/todos/index"
     else
-       redirect '/'
+       flash[:message] = "Please fill out the FULL form to edit."
+      redirect "/todos/index"
     end
   end
 

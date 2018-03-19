@@ -21,7 +21,7 @@ class UsersController < ApplicationController
       redirect "/users/#{@user.slug}"
     else
       # binding.pry
-      flash[:message] = "Could not save User, Please fill out the full form"
+      flash[:message] = "Could not save User, Please fill out the FULL form"
       redirect "/"
     end
   end

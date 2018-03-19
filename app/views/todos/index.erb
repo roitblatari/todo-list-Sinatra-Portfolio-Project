@@ -1,6 +1,10 @@
 
 <h1>Welcome To <%=@user.username%>'s ToDo List </h1>
 
+<% if flash.has?(:message) %>
+  <h2><%= flash[:message] %></h2>
+<% end %>
+
 <%@todos.each do |todo|%>
 </br>
   <p> <%=todo.content%> </p>
@@ -11,7 +15,7 @@
   
   <form action="/todos/<%= todo.id %>/delete" method="post" >
     <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Delet ToDo">
+    <input type="submit" value="Delete ToDo">
   </Form>
 <br>
 <%end%>
