@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   post '/users' do
     @user = User.new(username: params[:username], email: params[:email], password: params[:password] )
     if @user.save 
-      binding.pry
+      # binding.pry
       session[:user_id] = @user.id
       # binding.pry
       redirect "/users/#{@user.slug}"
