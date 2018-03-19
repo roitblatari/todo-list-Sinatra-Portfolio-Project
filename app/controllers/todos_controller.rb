@@ -31,7 +31,7 @@ class TodosController < ApplicationController
       redirect "/todos/index"
     else
       # binding.pry
-      flash[:message] = "Please fill out the FULL form."
+      flash[:message] = "Please fill Out The Input To Create a New ToDo."
       redirect "/todos/index"
     end 
 
@@ -58,7 +58,7 @@ class TodosController < ApplicationController
       @todo.save
      redirect "/todos/index"
     else
-       flash[:message] = "Please fill out the FULL form to edit."
+       flash[:message] = "Please fill Out The Input To Edit ToDo."
       redirect "/todos/index"
     end
   end
