@@ -3,9 +3,17 @@ class TodosController < ApplicationController
  
   # use Sinatra::Flash
   get "/todos/index" do
-    @user = current_user
-    @todos = current_user.todos
-    erb :"/todos/index"
+    # binding.pry
+    if logged_in?
+      @user = current_user
+      @todos = current_user.todos
+       erb :"/todos/index"
+    else
+      flash[:message] = "You are not logged in."
+      redirect "/"
+    end
+   
+   
   end
 
   get "/todos/new" do
