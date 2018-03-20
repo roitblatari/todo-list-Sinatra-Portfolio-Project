@@ -14,6 +14,6 @@ Specs:
 
 Confirm
 - [x] You have a large number of small Git commits
-- [?] Your commit messages are meaningful
-- [?] You made the changes in a commit that relate to the commit message
-- [ ] You don't include changes in a commit that aren't related to the commit message
+- [?] Your commit messages are meaningful <!-- Most of them are -->
+- [?] You made the changes in a commit that relate to the commit message <!--  75% -->
+- [?] You don't include changes in a commit that aren't related to the commit message <!--65%-->
