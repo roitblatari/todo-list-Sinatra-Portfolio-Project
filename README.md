@@ -17,11 +17,12 @@ Everyone interacting in the ToDo List project’s codebases, issue trackers, cha
 
 
 
-Step 2: Create a local clone of your fork
-Right now, you have a fork of the Spoon-Knife repository, but you don't have the files in that repository on your computer. Let's create a clone of your fork locally on your computer.
+## Create a local clone of your fork
+Right now, you have a fork of the todo-list-Sinatra-Portfolio-Project repository, but you don't have the files in that repository on your computer. Let's create a clone of your fork locally on your computer.
 
-On GitHub, navigate to your fork of the Spoon-Knife repository.
+On GitHub, navigate to your fork of the todo-list-Sinatra-Portfolio-Project repository.
 Clone or download buttonUnder the repository name, click Clone or download.
+<img src="/assets/images/help/repository/clone-repo-clone-url-button.png" alt="Clone or download button">
 Clone URL buttonIn the Clone with HTTPs section, click  to copy the clone URL for the repository.
 
 Open Terminal.
