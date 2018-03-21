@@ -22,18 +22,18 @@ Right now, you have a fork of the todo-list-Sinatra-Portfolio-Project repository
 
 On GitHub, navigate to your fork of the todo-list-Sinatra-Portfolio-Project repository.
 Clone or download buttonUnder the repository name, click Clone or download.
-<img src="/assets/images/help/repository/clone-repo-clone-url-button.png" alt="Clone or download button">
+
 Clone URL buttonIn the Clone with HTTPs section, click  to copy the clone URL for the repository.
 
 Open Terminal.
 
 Type git clone, and then paste the URL you copied in Step 2. It will look like this, with your GitHub username instead of YOUR-USERNAME:
 
-git clone https://github.com/YOUR-USERNAME/Spoon-Knife
+git clone https://github.com/roitblatari/todo-list-Sinatra-Portfolio-Project
 Press Enter. Your local clone will be created.
 
-git clone https://github.com/YOUR-USERNAME/Spoon-Knife
-Cloning into `Spoon-Knife`...
+git clone https://github.com/roitblatari/todo-list-Sinatra-Portfolio-Project
+Cloning into `todo-list-Sinatra-Portfolio-Project`...
 remote: Counting objects: 10, done.
 remote: Compressing objects: 100% (8/8), done.
 remove: Total 10 (delta 1), reused 10 (delta 1)
