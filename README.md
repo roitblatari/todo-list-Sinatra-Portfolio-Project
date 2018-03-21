@@ -18,8 +18,6 @@ Everyone interacting in the ToDo List project’s codebases, issue trackers, cha
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/roitblatari/todo-list-Sinatra-Portfolio-Project. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-
-
 ## Create a local clone of your fork
 Right now, you have a fork of the todo-list-Sinatra-Portfolio-Project repository, but you don't have the files in that repository on your computer. Let's create a clone of your fork locally on your computer.
 
