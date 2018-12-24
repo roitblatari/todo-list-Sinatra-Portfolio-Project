@@ -40,12 +40,13 @@ class TodosController < ApplicationController
 
   get "/todos/:id/edit" do
     # binding.pry
-    if logged_in?
+    @todo = Todo.find(params[:id])
+    if logged_in? && current_user.id == @todo.user_id
       @user = current_user
-      @todo = Todo.find(params[:id])
+      
       erb :"/todos/edit"
     else
-      redirect "/"
+       redirect "/todos/index"
     end  
   end
 
