@@ -1,4 +1,10 @@
 
+## Installation
+To use the application locally, clone the repo and run bundle install from the game directory. Then run rake db:migrate to load the databases. Then, run shotgun and navigate to localhost:9393 in your browser.
+
+
+
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/roitblatari/todo-list-Sinatra-Portfolio-Project/. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
